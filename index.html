@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mel Casino</title>
+  <style>
+    body {
+      background: black;
+      color: white;
+      font-family: Arial;
+      text-align: center;
+      padding-top: 50px;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎰 Mel Casino</h1>
+  <p>Simple demo version</p>
+
+  <h2 id="balance">Balance: 1000</h2>
+
+  <button onclick="play()">Play Game</button>
+
+  <p id="result"></p>
+
+  <script>
+    let balance = 1000;
+
+    function play() {
+      let win = Math.random() > 0.5;
+
+      if (win) {
+        balance += 100;
+        document.getElementById("result").innerText = "You Win! 🟢";
+      } else {
+        balance -= 100;
+        document.getElementById("result").innerText = "You Lose 🔴";
+      }
+
+      document.getElementById("balance").innerText = "Balance: " + balance;
+    }
+  </script>
+
+</body>
+                                  </html>
